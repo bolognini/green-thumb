@@ -42,6 +42,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "history": "^4.10.1",
+    "prop-types": "^15.7.2",
+    "styled-reset": "^4.1.2",
     "stylelint": "^13.3.1"
   }
 }
