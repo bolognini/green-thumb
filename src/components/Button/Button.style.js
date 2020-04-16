@@ -17,6 +17,14 @@ export const ButtonWrapper = styled.button`
   cursor: pointer;
   transition: ease-out 0.1s;
 
+  &:disabled {
+    background-color: var(--placeholder-color);
+
+    &:hover {
+      background-color: var(--placeholder-color);
+    }
+  }
+
   ${({ secondary }) => secondary && `
     background-color: transparent;
     border: 1px solid var(--dark-green);
@@ -24,6 +32,30 @@ export const ButtonWrapper = styled.button`
 
     svg {
       transform: rotate(180deg);
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: var(--placeholder-color);
+      color: var(--placeholder-color);
+
+      &:hover {
+        background-color: transparent;
+        border-color: var(--placeholder-color);
+        color: var(--placeholder-color);
+
+        svg {
+          path {
+            stroke: var(--placeholder-color);
+          }
+        }
+      }
+
+      svg {
+        path {
+          stroke: var(--placeholder-color);
+        }
+      }
     }
   `}
 
@@ -33,6 +65,12 @@ export const ButtonWrapper = styled.button`
       border-color: var(--green);
       background-color: transparent;
       color: var(--green);
+
+      svg {
+        path {
+          stroke: var(--green);
+        }
+      }
     `}
     transition: ease-in 0.1s;
   }

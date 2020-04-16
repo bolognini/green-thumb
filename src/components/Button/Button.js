@@ -7,9 +7,16 @@ const Button = ({
   text,
   hasArrow,
   secondary,
+  disabled,
   onClick
 }) => (
-  <ButtonWrapper secondary={secondary} hasArrow={hasArrow} onClick={onClick} type='button'>
+  <ButtonWrapper
+    disabled={disabled}
+    secondary={secondary}
+    hasArrow={hasArrow}
+    onClick={onClick}
+    type='button'
+  >
     <ButtonContent hasArrow={hasArrow}>
       {hasArrow && (
         secondary ? <GreenArrow /> : <WhiteArrow />
@@ -23,12 +30,14 @@ Button.propTypes = {
   text: string.isRequired,
   hasArrow: bool,
   secondary: bool,
+  disabled: bool,
   onClick: func.isRequired
 }
 
 Button.defaultProps = {
   hasArrow: false,
-  secondary: false
+  secondary: false,
+  disabled: false
 }
 
 export default Button

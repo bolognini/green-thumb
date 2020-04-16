@@ -1,32 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   string,
   arrayOf,
   object,
-  shape
+  shape,
+  bool
 } from 'prop-types'
 import {
   QuizzStepWrapper,
   Illustration,
   Description,
-  PreferencesList
+  PreferencesList,
+  PreferenceItem
 } from './QuizzStep.style'
 
-const QuizzStep = ({ step }) => {
+const QuizzStep = ({ step, active, collectPreferences }) => {
+  const [selected, setSelected] = useState(null)
   const { background, description, preferences } = step
 
+  const handleSelected = (selectedItem, selectedPreference) => {
+    setSelected(selectedItem)
+    collectPreferences(selectedPreference)
+  }
+
   return (
-    <QuizzStepWrapper>
+    <QuizzStepWrapper active={active}>
       <Illustration background={background} />
       <Description dangerouslySetInnerHTML={{ __html: description }} />
       <PreferencesList petPreference={background === 'dog'}>
-        {preferences.map(preference => {
+        {preferences.map((preference, index) => {
           const { Icon, text } = preference
           return (
-            <li key={background}>
+            <PreferenceItem
+              key={background}
+              background={background}
+              selected={selected === index}
+              onClick={() => handleSelected(index, text)}
+            >
               <Icon />
               <span>{text}</span>
-            </li>
+            </PreferenceItem>
           )
         })}
       </PreferencesList>
@@ -39,7 +52,8 @@ QuizzStep.propTypes = {
     background: string,
     description: string,
     preferences: arrayOf(object)
-  }).isRequired
+  }).isRequired,
+  active: bool.isRequired
 }
 
 export default QuizzStep
