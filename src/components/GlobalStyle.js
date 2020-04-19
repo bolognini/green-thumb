@@ -36,6 +36,10 @@ export const Styles = createGlobalStyle`
 
     font-family: 'Montserrat', sans-serif;
   }
+
+  * {
+    box-sizing: border-box;
+  }
 `
 
 export const GlobalStyle = () => <Styles />

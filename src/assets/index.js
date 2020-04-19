@@ -14,6 +14,11 @@ import { ReactComponent as GreenNoAnswer } from 'assets/icons/green/no-answer.sv
 import { ReactComponent as GreyNoAnswer } from 'assets/icons/grey/no-answer.svg'
 import { ReactComponent as GreyPet } from 'assets/icons/grey/pet.svg'
 import { ReactComponent as GreyToxic } from 'assets/icons/grey/toxic.svg'
+import { ReactComponent as GreyHighSun } from 'assets/icons/grey/high-sun.svg'
+import { ReactComponent as GreyLowSun } from 'assets/icons/grey/low-sun.svg'
+import { ReactComponent as GreyOneDrop } from 'assets/icons/grey/one-drop.svg'
+import { ReactComponent as GreyTwoDrops } from 'assets/icons/grey/two-drops.svg'
+import { ReactComponent as GreyThreeDrops } from 'assets/icons/grey/three-drops.svg'
 
 import { ReactComponent as WhiteHighSun } from 'assets/icons/white/high-sun.svg'
 import { ReactComponent as WhiteLowSun } from 'assets/icons/white/low-sun.svg'
@@ -39,6 +44,11 @@ export {
   GreyNoAnswer,
   GreyPet,
   GreyToxic,
+  GreyHighSun,
+  GreyLowSun,
+  GreyOneDrop,
+  GreyTwoDrops,
+  GreyThreeDrops,
   WhiteHighSun,
   WhiteLowSun,
   WhiteNoAnswer,
