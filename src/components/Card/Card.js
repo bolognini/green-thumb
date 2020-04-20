@@ -71,7 +71,6 @@ const Card = props => {
 
 
 Card.propTypes = {
-  id: number.isRequired,
   name: string.isRequired,
   price: number.isRequired,
   sun: string.isRequired,

@@ -3,6 +3,8 @@ import reset from 'styled-reset'
 import { createGlobalStyle } from 'styled-components'
 
 export const breakpoint = {
+  xsmall: '@media (min-width: 360px)',
+  small: '@media (min-width: 768px)',
   desktop: '@media (min-width: 1280px)'
 }
 

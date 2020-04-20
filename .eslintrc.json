@@ -30,6 +30,7 @@
     "semi": ["error", "never"],
     "max-len": ["error", 150, { "ignoreTemplateLiterals": true }],
     "arrow-parens": ["error", "as-needed"],
+    "consistent-return": "off",
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
     "jsx-quotes": ["error", "prefer-single"],
