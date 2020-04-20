@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import { number, string, bool } from 'prop-types'
 import {
   GreyToxic,
@@ -12,17 +13,18 @@ import {
 import Button from 'components/Button'
 import { CardWrapper, PlantImage, PlantName, PlantInformation, IconWrapper, Price } from './Card.style'
 
-const Card = ({
-  id,
-  name,
-  price,
-  sun,
-  water,
-  url,
-  toxicity
-}) => {
+const Card = props => {
+  const history = useHistory()
   const [sunData, setSunData] = useState(<GreyNoAnswer />)
   const [waterData, setWaterData] = useState(<GreyThreeDrops />)
+  const {
+    name,
+    price,
+    sun,
+    water,
+    url,
+    toxicity
+  } = props
 
   const mountSunData = () => {
     if (sun === 'high') {
@@ -61,7 +63,7 @@ const Card = ({
         text='buy now'
         disabled={false}
         secondary
-        onClick={() => console.log('oi')}
+        onClick={() => history.push('/checkout', props)}
       />
     </CardWrapper>
   )

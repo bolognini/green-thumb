@@ -8,13 +8,13 @@ import {
   GreenThreeDrops
 } from 'assets'
 
-export const QUIZZ_CHOICE = {
+export const QUIZ_CHOICE = {
   SUNLIGHT: 0,
   WATER: 1,
   PET: 2
 }
 
-export const QUIZZ_PREFERENCES = [
+export const QUIZ_PREFERENCES = [
   {
     stepName: 'sun',
     background: 'sun',

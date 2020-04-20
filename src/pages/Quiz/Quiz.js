@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { QUIZZ_CHOICE, QUIZZ_PREFERENCES } from 'constants/index'
+import { QUIZ_CHOICE, QUIZ_PREFERENCES } from 'constants/index'
 import { useHistory } from 'react-router-dom'
 import Button from 'components/Button'
 import Header from 'components/Header'
-import QuizzStep from 'components/QuizzStep'
+import QuizStep from 'components/QuizStep'
 import {
-  QuizzWrapper,
-  QuizzContent,
+  QuizWrapper,
+  QuizContent,
   ButtonContainer
-} from './Quizz.style'
+} from './Quiz.style'
 
-const Quizz = () => {
+const Quiz = () => {
   const history = useHistory()
   const [disabled, setDisabled] = useState(true)
   const [activeStep, setActiveStep] = useState(0)
@@ -19,7 +19,7 @@ const Quizz = () => {
     water: null,
     pets: null
   })
-  const { firstButtonText, secondButtonText } = QUIZZ_PREFERENCES[activeStep]
+  const { firstButtonText, secondButtonText } = QUIZ_PREFERENCES[activeStep]
 
   useEffect(() => {
     setDisabled(true)
@@ -30,28 +30,28 @@ const Quizz = () => {
   }
 
   return (
-    <QuizzWrapper>
+    <QuizWrapper>
       <Header />
-      <QuizzContent>
-        <QuizzStep
-          active={activeStep === QUIZZ_CHOICE.SUNLIGHT}
-          step={QUIZZ_PREFERENCES[QUIZZ_CHOICE.SUNLIGHT]}
+      <QuizContent>
+        <QuizStep
+          active={activeStep === QUIZ_CHOICE.SUNLIGHT}
+          step={QUIZ_PREFERENCES[QUIZ_CHOICE.SUNLIGHT]}
           setSelectedPreference={handleSelection}
           setDisabled={setDisabled}
         />
-        <QuizzStep
-          active={activeStep === QUIZZ_CHOICE.WATER}
-          step={QUIZZ_PREFERENCES[QUIZZ_CHOICE.WATER]}
+        <QuizStep
+          active={activeStep === QUIZ_CHOICE.WATER}
+          step={QUIZ_PREFERENCES[QUIZ_CHOICE.WATER]}
           setSelectedPreference={handleSelection}
           setDisabled={setDisabled}
         />
-        <QuizzStep
-          active={activeStep === QUIZZ_CHOICE.PET}
-          step={QUIZZ_PREFERENCES[QUIZZ_CHOICE.PET]}
+        <QuizStep
+          active={activeStep === QUIZ_CHOICE.PET}
+          step={QUIZ_PREFERENCES[QUIZ_CHOICE.PET]}
           setSelectedPreference={handleSelection}
           setDisabled={setDisabled}
         />
-        <ButtonContainer petPreference={activeStep === QUIZZ_CHOICE.PET}>
+        <ButtonContainer petPreference={activeStep === QUIZ_CHOICE.PET}>
           <Button
             disabled={disabled}
             text={firstButtonText}
@@ -69,9 +69,9 @@ const Quizz = () => {
             secondary
           />
         </ButtonContainer>
-      </QuizzContent>
-    </QuizzWrapper>
+      </QuizContent>
+    </QuizWrapper>
   )
 }
 
-export default Quizz
+export default Quiz

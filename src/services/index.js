@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { ENDPOINT } from 'constants/index'
 
 export const getList = (object, setState) => {
@@ -8,5 +7,15 @@ export const getList = (object, setState) => {
     .then(res => {
       setState(res)
     })
+    .catch(error => console.error(error))
+}
+
+export const sendUserInformation = (object, form) => {
+  // const { name, email, id } = object
+  fetch(ENDPOINT, {
+    method: 'post',
+    body: new FormData(form)
+  })
+    .then(res => res.json())
     .catch(error => console.error(error))
 }

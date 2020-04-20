@@ -8,15 +8,15 @@ import {
   func
 } from 'prop-types'
 import {
-  QuizzStepWrapper,
+  QuizStepWrapper,
   Illustration,
   Description,
   PreferencesList,
   PreferenceItem,
   Caption
-} from './QuizzStep.style'
+} from './QuizStep.style'
 
-const QuizzStep = ({ step, active, setSelectedPreference, setDisabled }) => {
+const QuizStep = ({ step, active, setSelectedPreference, setDisabled }) => {
   const [selected, setSelected] = useState(null)
   const { stepName, background, description, caption, preferences } = step
 
@@ -27,7 +27,7 @@ const QuizzStep = ({ step, active, setSelectedPreference, setDisabled }) => {
   }
 
   return (
-    <QuizzStepWrapper active={active}>
+    <QuizStepWrapper active={active}>
       <Illustration petPreference={background === 'dog'} background={background} />
       <Description petPreference={background === 'dog'} dangerouslySetInnerHTML={{ __html: description }} />
       {caption && <Caption dangerouslySetInnerHTML={{ __html: caption }} />}
@@ -47,11 +47,11 @@ const QuizzStep = ({ step, active, setSelectedPreference, setDisabled }) => {
           )
         })}
       </PreferencesList>
-    </QuizzStepWrapper>
+    </QuizStepWrapper>
   )
 }
 
-QuizzStep.propTypes = {
+QuizStep.propTypes = {
   step: shape({
     background: string,
     description: string,
@@ -62,4 +62,4 @@ QuizzStep.propTypes = {
   setDisabled: func.isRequired
 }
 
-export default QuizzStep
+export default QuizStep

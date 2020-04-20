@@ -16,9 +16,10 @@ export const Styles = createGlobalStyle`
     --coral: #FD9872;
     --red: #F71D1D;
     --grey: #6E6E6E;
-    --quizz-background: #F6F6F6;
+    --quiz-background: #F6F6F6;
     --form-background: #979797;
     --placeholder-color: #D0D0D0;
+    --price-text: #D6D6D6;
     --white: #FFF;
 
     --font-mobile-title: 35px;
@@ -35,6 +36,7 @@ export const Styles = createGlobalStyle`
     --bold-weight: 700;
 
     font-family: 'Montserrat', sans-serif;
+    font-weight: var(--light-weight);
   }
 
   * {

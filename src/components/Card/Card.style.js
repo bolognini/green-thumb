@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoint } from 'components/GlobalStyle'
 
 export const CardWrapper = styled.li`
   display: grid;
@@ -15,6 +16,10 @@ export const CardWrapper = styled.li`
 
   &:last-child {
     margin-right: 20px;
+  }
+
+  ${breakpoint.desktop} {
+    margin-left: 9px;
   }
 `
 
@@ -49,4 +54,8 @@ export const IconWrapper = styled.div`
   grid-column-gap: 9px;
 `
 
-export const Price = styled.span``
+export const Price = styled.span`
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--grey);
+`

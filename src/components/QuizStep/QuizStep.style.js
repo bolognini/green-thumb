@@ -4,7 +4,7 @@ import Sun from 'assets/illustrations/sun.png'
 import WateringCan from 'assets/illustrations/wateringcan.png'
 import Dog from 'assets/illustrations/dog.png'
 
-export const QuizzStepWrapper = styled.div`
+export const QuizStepWrapper = styled.div`
   display: ${({ active }) => (active ? 'flex' : 'none')};
   flex-direction: column;
   place-items: center;

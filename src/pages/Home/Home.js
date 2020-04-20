@@ -18,9 +18,9 @@ const Home = () => {
         <Logo title='Green Thumb Logo' />
         <Title>Find your next green friend</Title>
         <Button
-          text='start quizz'
+          text='start quiz'
           hasArrow
-          onClick={() => history.push('/quizz')}
+          onClick={() => history.push('/quiz')}
         />
       </HomeContent>
       <BackgroundIllustration />

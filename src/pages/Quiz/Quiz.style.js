@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { breakpoint } from 'components/GlobalStyle'
 
-export const QuizzWrapper = styled.div`
+export const QuizWrapper = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
   min-height: 100vh;
-  background-color: var(--quizz-background);
+  background-color: var(--quiz-background);
 
   ${breakpoint.desktop} {
     display: grid;
@@ -14,7 +14,7 @@ export const QuizzWrapper = styled.div`
   }
 `
 
-export const QuizzContent = styled.div`
+export const QuizContent = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
