@@ -18,6 +18,7 @@ const Card = props => {
   const [sunData, setSunData] = useState(<GreyNoAnswer />)
   const [waterData, setWaterData] = useState(<GreyThreeDrops />)
   const {
+    id,
     name,
     price,
     sun,
@@ -63,7 +64,10 @@ const Card = props => {
         text='buy now'
         disabled={false}
         secondary
-        onClick={() => history.push('/checkout', props)}
+        onClick={() => history.push({
+          pathname: `/plant`,
+          search: `?id=${id}`
+        })}
       />
     </CardWrapper>
   )
@@ -71,6 +75,7 @@ const Card = props => {
 
 
 Card.propTypes = {
+  id: number.isRequired,
   name: string.isRequired,
   price: number.isRequired,
   sun: string.isRequired,

@@ -4,7 +4,7 @@ import history from 'routes/history'
 import Home from 'pages/Home/Home'
 import Quiz from 'pages/Quiz/Quiz'
 import Showcase from 'pages/Showcase/Showcase'
-import Checkout from 'pages/Checkout/Checkout'
+import Plant from 'pages/Plant/Plant'
 import NotFound from 'pages/NotFound/NotFound'
 
 const Routes = () => (
@@ -13,7 +13,7 @@ const Routes = () => (
       <Route path='/' exact component={Home} />
       <Route path='/quiz' component={Quiz} />
       <Route path='/showcase' component={Showcase} />
-      <Route path='/checkout' component={Checkout} />
+      <Route path='/plant' component={Plant} />
       <Route path='*' component={NotFound} />
     </Switch>
   </Router>
