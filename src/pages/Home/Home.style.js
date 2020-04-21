@@ -9,7 +9,7 @@ export const HomeWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: calc(100vh - 160px);
+  min-height: 100vh;
   background-color: var(--quiz-background);
 
   ${breakpoint.desktop} {
