@@ -27,7 +27,7 @@ export const Wrapper = styled.header`
 `
 
 export const Logo = styled(GreenThumbLogo)`
- max-width: 166px;
+  max-width: 166px;
 
   ${breakpoint.desktop} {
     max-width: 208px;

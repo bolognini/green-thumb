@@ -18,8 +18,8 @@ export const HomeWrapper = styled.div`
 `
 
 export const Logo = styled(GreenThumbLogo)`
- max-width: 166px;
- height: 85px;
+  max-width: 166px;
+  height: 85px;
 
   ${breakpoint.desktop} {
     padding-top: 62px;
