@@ -14,6 +14,7 @@ export const Styles = createGlobalStyle`
   :root {
     --green: #7BAF9E;
     --dark-green: #15573F;
+    --alpha-green: rgba(21, 87, 63, 0.414827);
     --black: #0C261C;
     --coral: #FD9872;
     --red: #F71D1D;
@@ -23,12 +24,10 @@ export const Styles = createGlobalStyle`
     --placeholder-color: #D0D0D0;
     --price-text: #D6D6D6;
     --white: #FFF;
-
     --font-mobile-title: 35px;
     --font-mobile-subtitle: 22px;
     --font-mobile-caption: 14px;
     --font-mobile-button: 16px;
-
     --line-height-mobile-title: 43px;
     --line-height-mobile-subtitle: 32px;
     --line-height-mobile-caption: 25px;

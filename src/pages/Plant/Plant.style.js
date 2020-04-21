@@ -17,14 +17,13 @@ export const PlantWrapper = styled.div`
 
 export const PlantContent = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   height: 100%;
 
   ${breakpoint.desktop} {
     grid-template-rows: none;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-items: center;
   }
 `
 
@@ -32,6 +31,10 @@ export const PlantInformation = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 28px;
+
+  ${breakpoint.desktop} {
+    justify-self: center;
+  }
 `
 
 export const PlantName = styled.h2`
@@ -40,12 +43,20 @@ export const PlantName = styled.h2`
   font-size: 35px;
   line-height: 42px;
   margin-top: 62px;
+
+  ${breakpoint.desktop} {
+    font-size: 50px;
+    line-height: 55px;
+    max-width: 300px;
+    margin-top: 0;
+  }
 `
 
 export const Price = styled.span`
-  color: var(--price-text);
   font-size: 24px;
   line-height: 29px;
+  color: var(--price-text);
+  padding-top: 12px;
 `
 
 export const PlantImage = styled.div`
@@ -56,13 +67,21 @@ export const PlantImage = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  ${breakpoint.desktop} {
+    align-self: flex-start;
+  }
 `
 
 export const ChosenPreferences = styled.div`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  grid-row-gap: 24px;
+  grid-row-gap: 16px;
   padding: 19px 0 46px;
+
+  ${breakpoint.desktop} {
+    padding: 0;
+  }
 `
 
 export const Preference = styled.div`

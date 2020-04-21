@@ -72,8 +72,11 @@ const Form = ({ plantId }) => {
 
   return (
     <FormWrapper>
-      <Title>{emailSent ? 'Thank you!' : 'Nice pick!'}</Title>
-      <Description>{emailSent ? 'You will hear from us soon. Please check your e-mail!' : 'Tell us your name and e-mail and we will get in touch about your order ;)'}</Description>
+      <Title align={emailSent}>{emailSent ? 'Thank you!' : 'Nice pick!'}</Title>
+      <Description align={emailSent}>{emailSent
+        ? 'You will hear from us soon. Please check your e-mail!'
+        : 'Tell us your name and e-mail and we will get in touch about your order ;)'}
+      </Description>
       {emailSent
         ? <ThankYouImage />
         : (

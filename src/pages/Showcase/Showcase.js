@@ -9,8 +9,7 @@ import {
   ShowcaseContent,
   Illustration,
   ShowcaseList,
-  ListCarousel,
-  Loader
+  ListCarousel
 } from './Showcase.style'
 
 const Showcase = () => {

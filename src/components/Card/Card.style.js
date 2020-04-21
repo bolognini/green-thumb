@@ -36,6 +36,7 @@ export const PlantName = styled.span`
   font-weight: var(--bold-weight);
   font-size: 18px;
   line-height: 28px;
+  justify-self: left;
   color: var(--dark-green);
 `
 

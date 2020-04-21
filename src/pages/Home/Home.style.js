@@ -10,6 +10,7 @@ export const HomeWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
+  background-color: var(--quiz-background);
 
   ${breakpoint.desktop} {
     display: grid;
@@ -18,7 +19,8 @@ export const HomeWrapper = styled.div`
 `
 
 export const Logo = styled(GreenThumbLogo)`
- max-width: 166px;
+  max-width: 166px;
+  height: 85px;
 
   ${breakpoint.desktop} {
     padding-top: 62px;
@@ -59,8 +61,9 @@ export const BackgroundIllustration = styled.div`
   width: 100%;
   height: 60vh;
   background-image: url(${HomeIllustrationMobile});
-  background-size: contain;
+  background-size: auto 100%, cover;
   background-repeat: no-repeat;
+  background-position: center bottom;
 
   ${breakpoint.desktop} {
     height: 100%;
