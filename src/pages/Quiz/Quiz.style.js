@@ -5,7 +5,7 @@ export const QuizWrapper = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 160px);
   background-color: var(--quiz-background);
 
   ${breakpoint.desktop} {
