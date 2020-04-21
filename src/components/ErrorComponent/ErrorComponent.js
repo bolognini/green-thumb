@@ -9,10 +9,10 @@ const ErrorComponent = () => (
       <Link to='/quiz'>
         <GreenPet title='Voltar ao quiz' />
       </Link>
-      <h4>algo deu errado</h4>
+      <h4>something went wrong</h4>
     </ErrorContent>
-    <Caption>por favor, clique no doguinho para voltar ao quiz.</Caption>
-    <MobileCaption>por favor, toque no doguinho para voltar ao quiz.</MobileCaption>
+    <Caption>please, click on puppy to get back to quiz.</Caption>
+    <MobileCaption>please, tap on the puppy to get back to the quiz.</MobileCaption>
   </ErrorWrapper>
 )
 

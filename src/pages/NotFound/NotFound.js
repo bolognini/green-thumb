@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { CoralNoAnswer } from 'assets'
 import Header from 'components/Header'
-import { NotFoundWrapper, NotFoundContent, ForbiddenArea, Caption } from './NotFound.style'
+import { NotFoundWrapper, NotFoundContent, ForbiddenArea, Caption, MobileCaption } from './NotFound.style'
 
 const NotFound = () => (
   <NotFoundWrapper>
@@ -14,7 +14,8 @@ const NotFound = () => (
         </Link>
         <h4>404</h4>
       </ForbiddenArea>
-      <Caption>essa página não existe. por favor, volte à página principal</Caption>
+      <Caption>this page doesn&apos;t exist. please, <Link to='/'>click here</Link> to return to homepage</Caption>
+      <MobileCaption>this page doesn&apos;t exist. please, <Link to='/'>tap here</Link> to return to homepage</MobileCaption>
     </NotFoundContent>
   </NotFoundWrapper>
 )

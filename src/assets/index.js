@@ -29,6 +29,8 @@ import { ReactComponent as WhiteThreeDrops } from 'assets/icons/white/three-drop
 import { ReactComponent as WhitePet } from 'assets/icons/white/pet.svg'
 import { ReactComponent as WhiteArrow } from 'assets/icons/white/arrow.svg'
 
+import { ReactComponent as ErrorSign } from 'assets/icons/red/error.svg'
+
 export {
   Logo,
   CoralHighSun,
@@ -56,5 +58,6 @@ export {
   WhiteTwoDrops,
   WhiteThreeDrops,
   WhitePet,
-  WhiteArrow
+  WhiteArrow,
+  ErrorSign
 }

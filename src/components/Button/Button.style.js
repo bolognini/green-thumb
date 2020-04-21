@@ -17,6 +17,11 @@ export const ButtonWrapper = styled.button`
   cursor: pointer;
   transition: ease-out 0.1s;
 
+  &:focus {
+    background-color: var(--dark-green);
+    color: var(--white);
+  }
+
   &:disabled {
     background-color: var(--placeholder-color);
 

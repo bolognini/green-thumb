@@ -43,6 +43,7 @@ export const Styles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    outline: none;
   }
 `
 

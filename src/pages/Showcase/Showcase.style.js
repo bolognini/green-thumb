@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { breakpoint } from 'components/GlobalStyle'
 import Pick from 'assets/illustrations/pick.png'
 

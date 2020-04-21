@@ -69,8 +69,24 @@ export const ForbiddenArea = styled.div`
 `
 
 export const Caption = styled.span`
+  display: none;
   font-size: 14px;
   line-height: 25px;
   text-align: center;
-  padding: 0 24px;
+
+  a {
+    color: var(--coral);
+    text-decoration: none;
+  }
+
+  ${breakpoint.desktop} {
+    display: inline;
+  }
+`
+export const MobileCaption = styled(Caption)`
+  display: inline;
+
+  ${breakpoint.desktop} {
+    display: none;
+  }
 `
