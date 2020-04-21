@@ -6,7 +6,7 @@ export const ShowcaseWrapper = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
-  min-height: calc(100vh - 160px);
+  min-height: 100vh;
   background-color: var(--quiz-background);
 
   ${breakpoint.desktop} {
