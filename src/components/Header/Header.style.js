@@ -10,6 +10,8 @@ export const Wrapper = styled.header`
     align-self: start;
     margin-top: 160px;
     padding-top: 0;
+    position: sticky;
+    top: 160px;
 
     &::before {
       content: '';
@@ -19,7 +21,7 @@ export const Wrapper = styled.header`
       display: block;
       width: 2px;
       height: 400px;
-      background-color: var(--dark-green);
+      background-color: var(--alpha-green);
     }
   }
 `

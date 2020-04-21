@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { breakpoint } from 'components/GlobalStyle'
 import Pick from 'assets/illustrations/pick.png'
 
@@ -20,6 +20,11 @@ export const ShowcaseContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: start;
+
+  ${breakpoint.desktop} {
+    width: calc(100% - 208px);
+  }
 
   h2 {
     font-size: 40px;
@@ -32,6 +37,8 @@ export const ShowcaseContent = styled.div`
 
     ${breakpoint.desktop} {
       margin-bottom: 78px;
+      font-size: 65px;
+      line-height: 79px;
     }
   }
 `
@@ -47,6 +54,8 @@ export const Illustration = styled.div`
 
   ${breakpoint.desktop} {
     margin: 69px 0 48px 0;
+    width: 226px;
+    height: 112px;
   }
 `
 
@@ -64,4 +73,5 @@ export const ShowcaseList = styled.ul`
 
 export const ListCarousel = styled.div`
   overflow: auto;
+  padding-bottom: 24px;
 `

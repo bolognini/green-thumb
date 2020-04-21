@@ -8,7 +8,6 @@ export const QuizStepWrapper = styled.div`
   display: ${({ active }) => (active ? 'flex' : 'none')};
   flex-direction: column;
   place-items: center;
-  padding: 0 24px;
 `
 
 export const Illustration = styled.div`
