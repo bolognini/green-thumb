@@ -109,7 +109,6 @@ export const PreferenceItem = styled.li`
   padding: 18px 20px;
   border-radius: 5px;
   background-color: var(--white);
-  box-shadow: 0px 7px 14px 1px rgba(0,0,0,0.1);
   transition: 0.1s ease-in;
   cursor: pointer;
 

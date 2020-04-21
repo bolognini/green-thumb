@@ -62,6 +62,13 @@ export const Illustration = styled.div`
 export const ShowcaseList = styled.ul`
   display: flex;
   width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20px;
+
+  li {
+    scroll-snap-align: start;
+  }
 
   ${breakpoint.desktop} {
     width: 100%;
