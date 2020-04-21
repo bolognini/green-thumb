@@ -4,7 +4,7 @@ import { breakpoint } from 'components/GlobalStyle'
 export const PlantWrapper = styled.div`
   display: grid;
   grid-template-rows: 62px 1fr;
-  min-height: 100vh;
+  min-height: calc(100vh - 160px);
   place-items: center;
   background-color: var(--white);
 

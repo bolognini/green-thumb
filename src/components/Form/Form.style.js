@@ -56,7 +56,11 @@ export const ThankYouImage = styled.div`
 export const Formulary = styled.form`
   display: flex;
   flex-direction: column;
-  padding-top: 25px;
+  padding: 25px 14px 0 14px;
+
+  input {
+    appearance: none;
+  }
 `
 
 export const Label = styled.label`
