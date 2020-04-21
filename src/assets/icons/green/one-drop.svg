@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="70px" viewBox="0 0 57 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Icon/Big/OneDrop</title>
+    <desc>Created with Sketch.</desc>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="styleguide" transform="translate(-133.000000, -845.000000)" fill="#7BAF9E">
+            <g id="Icon/Big/OneDrop" transform="translate(126.000000, 845.000000)">
+                <path d="M35.2978723,2.58478337 C31.1927943,6.5231423 8.88652482,28.5342764 8.88652482,41.7612888 C8.88652482,56.2948121 20.734844,68.1174193 35.2978723,68.1174193 C49.8609007,68.1174193 61.7092199,56.2948121 61.7092199,41.7612888 C61.7092199,28.5342764 39.4029504,6.5231423 35.2978723,2.58478337 M35.2978723,70 C19.6944255,70 7,57.3321141 7,41.7612888 C7,26.4512008 33.5264255,1.64537557 34.6555106,0.596778098 L35.2978723,0 L35.940234,0.596778098 C37.0693191,1.64537557 63.5957447,26.4512008 63.5957447,41.7612888 C63.5957447,57.3321141 50.9013191,70 35.2978723,70" id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>
