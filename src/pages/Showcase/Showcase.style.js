@@ -81,12 +81,16 @@ export const ShowcaseList = styled.ul`
 const animation = keyframes`
   from {
     opacity: 0;
+    -webkit-opacity: 0;
     transform: translateX(30%);
+    -webkit-transform: translateX(30%);
   }
 
   to {
     opacity: 1;
+    -webkit-opacity: 1;
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
 `
 

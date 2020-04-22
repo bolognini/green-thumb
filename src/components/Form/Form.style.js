@@ -39,12 +39,16 @@ export const Description = styled.span`
 const envelopAnimation = keyframes`
   from {
     opacity: 0;
+    -webkit-opacity: 0;
     transform: translateY(30%);
+    -webkit-transform: translateY(30%);
   }
 
   to {
     opacity: 1;
+    -webkit-opacity: 1;
     transform: translateY(0%);
+    -webkit-transform: translateY(0%);
   }
 `
 
