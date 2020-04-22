@@ -47,4 +47,4 @@ cd coverage/lcov-report && open index.html
 * [ESLint](https://eslint.org/) - JavaScript Linter
 * [Stylelint](http://stylelint.io/) - CSS Linter
 * [Netlify](https://www.netlify.com/) - For CI/CD and deployment
-* [Flaticon](https://www.flaticon.com/br/icone-gratis/plantar_628324?term=plant&page=2&position=36) - For README icon
+* [Flaticon](https://www.flaticon.com/br/icone-gratis/plantar_628324?term=plant&page=2&position=36) - For README icon and favicon
