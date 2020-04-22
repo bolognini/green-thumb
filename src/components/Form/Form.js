@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { number } from 'prop-types'
 import { sendUserInformation } from 'services'
 import { ErrorSign } from 'assets'
+import { REGEX } from 'constants/index'
 import {
   FormWrapper,
   Title,
@@ -15,8 +16,6 @@ import {
 } from './Form.style'
 
 const Form = ({ plantId }) => {
-  const nameRegex = /^[[A-Z][a-z'\u00C0-\u00FF]+(\s+[[A-Z][a-z'\u00C0-\u00FF]+\s*)+$/gm
-  const emailRegex = /^[\w0-9._-]+@[\w0-9.-]+\.[\w]{2,}$/igm
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [nameError, setNameError] = useState(false)
@@ -32,8 +31,8 @@ const Form = ({ plantId }) => {
   }
 
   const isFormValid = (nameValue, emailValue) => {
-    const nameValidation = isInputValid(nameValue, setNameError, nameRegex)
-    const emailValidation = isInputValid(emailValue, setEmailError, emailRegex)
+    const nameValidation = isInputValid(nameValue, setNameError, REGEX.NAME)
+    const emailValidation = isInputValid(emailValue, setEmailError, REGEX.EMAIL)
 
     if (nameValidation && emailValidation) {
       return true
