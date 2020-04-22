@@ -24,10 +24,25 @@ cd green-thumb
 yarn && yarn start
 ```
 
+## Running the tests
+
+To run all the unit tests and checking their coverage, please run the commands below
+
+```shell
+yarn test:coverage
+```
+
+Coverage report folder will be automatically created on root folder of the project. Access it running the command below. It should open the HTML file that contains all detailed coverage report
+
+```shell
+cd coverage/lcov-report && open index.html
+```
+
 ## Built With
 
 * [create-react-app](https://github.com/facebook/create-react-app) - Most popular React boilerplate
 * [Styled Components](https://styled-components.com/) - CSS in JS library
+* [Jest](https://jestjs.io/) - Testing framework
 * [Husky](https://github.com/typicode/husky) - Git Hooks lib
 * [ESLint](https://eslint.org/) - JavaScript Linter
 * [Stylelint](http://stylelint.io/) - CSS Linter
