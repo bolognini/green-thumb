@@ -147,7 +147,8 @@ export const PreferenceItem = styled.li`
     transition: 0.1s ease-out;
 
     svg {
-      g, path {
+      g,
+      path {
         fill: var(--white);
       }
     }

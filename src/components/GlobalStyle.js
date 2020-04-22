@@ -32,7 +32,6 @@ export const Styles = createGlobalStyle`
     --line-height-mobile-subtitle: 32px;
     --line-height-mobile-caption: 25px;
     --line-height-mobile-button: 20px;
-
     --light-weight: 300;
     --bold-weight: 700;
 
