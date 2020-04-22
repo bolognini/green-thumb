@@ -111,7 +111,11 @@ const Form = ({ plantId }) => {
 }
 
 Form.propTypes = {
-  plantId: number.isRequired
+  plantId: number
+}
+
+Form.defaultProps = {
+  plantId: 0
 }
 
 export default Form

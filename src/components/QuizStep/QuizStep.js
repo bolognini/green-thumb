@@ -33,10 +33,10 @@ const QuizStep = ({ step, active, setSelectedPreference, setDisabled }) => {
       {caption && <Caption dangerouslySetInnerHTML={{ __html: caption }} />}
       <PreferencesList petPreference={background === 'dog'}>
         {preferences.map((preference, index) => {
-          const { Icon, text, requisitionValue } = preference
+          const { Icon, text, requisitionValue, preferenceId } = preference
           return (
             <PreferenceItem
-              key={background}
+              key={preferenceId}
               background={background}
               selected={selected === index}
               onClick={() => handleSelected(index, requisitionValue)}

@@ -20,9 +20,9 @@ export const QUIZ_PREFERENCES = [
     background: 'sun',
     description: `First, set the amount of <b>sunlight</b> your plant will get.`,
     preferences: [
-      { Icon: CoralHighSun, text: 'High sunlight', requisitionValue: 'high' },
-      { Icon: CoralLowSun, text: 'Low sunlight', requisitionValue: 'low' },
-      { Icon: CoralNoAnswer, text: 'No sunlight', requisitionValue: 'no' }
+      { preferenceId: 0, Icon: CoralHighSun, text: 'High sunlight', requisitionValue: 'high' },
+      { preferenceId: 1, Icon: CoralLowSun, text: 'Low sunlight', requisitionValue: 'low' },
+      { preferenceId: 2, Icon: CoralNoAnswer, text: 'No sunlight', requisitionValue: 'no' }
     ],
     firstButtonText: 'next',
     secondButtonText: 'home'
@@ -32,9 +32,9 @@ export const QUIZ_PREFERENCES = [
     background: 'wateringCan',
     description: `How often do you want to <b>water</b> your plant?`,
     preferences: [
-      { Icon: GreenOneDrop, text: 'Rarely', requisitionValue: 'rarely' },
-      { Icon: GreenTwoDrops, text: 'Regularly', requisitionValue: 'regularly' },
-      { Icon: GreenThreeDrops, text: 'Daily', requisitionValue: 'daily' }
+      { preferenceId: 0, Icon: GreenOneDrop, text: 'Rarely', requisitionValue: 'rarely' },
+      { preferenceId: 1, Icon: GreenTwoDrops, text: 'Regularly', requisitionValue: 'regularly' },
+      { preferenceId: 2, Icon: GreenThreeDrops, text: 'Daily', requisitionValue: 'daily' }
     ],
     firstButtonText: 'next',
     secondButtonText: 'previous'
@@ -45,8 +45,8 @@ export const QUIZ_PREFERENCES = [
     description: `Do you have pets? Do they <b>chew</b> plants?`,
     caption: `We are asking because some plants can be <b>toxic</b> for your buddy`,
     preferences: [
-      { Icon: CoralPet, text: 'Yes', requisitionValue: 'true' },
-      { Icon: CoralNoAnswer, text: `No/They don't care`, requisitionValue: 'false' }
+      { preferenceId: 0, Icon: CoralPet, text: 'Yes', requisitionValue: 'true' },
+      { preferenceId: 1, Icon: CoralNoAnswer, text: `No/They don't care`, requisitionValue: 'false' }
     ],
     firstButtonText: 'finish',
     secondButtonText: 'previous'
