@@ -54,3 +54,8 @@ export const QUIZ_PREFERENCES = [
 ]
 
 export const ENDPOINT = `https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service`
+
+export const REGEX = {
+  NAME: /^[[A-Z][a-z'\u00C0-\u00FF]+(\s+[[A-Z][a-z'\u00C0-\u00FF]+\s*)+$/gm,
+  EMAIL: /^[\w0-9._-]+@[\w0-9.-]+\.[\w]{2,}$/igm
+}
