@@ -7,6 +7,7 @@ import {
   bool,
   func
 } from 'prop-types'
+import handleSelected from './utils'
 import {
   QuizStepWrapper,
   Illustration,
@@ -19,12 +20,6 @@ import {
 const QuizStep = ({ step, active, setSelectedPreference, setDisabled }) => {
   const [selected, setSelected] = useState(null)
   const { stepName, background, description, caption, preferences } = step
-
-  const handleSelected = (selectedItem, selectedPreference) => {
-    setSelected(selectedItem)
-    setSelectedPreference(stepName, selectedPreference)
-    setDisabled(false)
-  }
 
   return (
     <QuizStepWrapper active={active}>
@@ -39,7 +34,7 @@ const QuizStep = ({ step, active, setSelectedPreference, setDisabled }) => {
               key={preferenceId}
               background={background}
               selected={selected === index}
-              onClick={() => handleSelected(index, requisitionValue)}
+              onClick={() => handleSelected(index, requisitionValue, setSelected, setSelectedPreference, setDisabled, stepName)}
             >
               <Icon />
               <span>{text}</span>
