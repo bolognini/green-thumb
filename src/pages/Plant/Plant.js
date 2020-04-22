@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useHistory } from 'react-router-dom'
 import { getPlant } from 'services'
 import Header from 'components/Header'
 import Form from 'components/Form'
@@ -17,12 +17,17 @@ import {
 } from './Plant.style'
 
 const Plant = () => {
+  const history = useHistory()
   const useQuery = () => new URLSearchParams(useLocation().search)
   const query = useQuery()
   const [plantData, setPlantData] = useState({})
+  const [fallback, setFallback] = useState(false)
 
   useEffect(() => {
-    getPlant(query.get('id'), setPlantData)
+    if (!query.get('id')) {
+      return history.push('/')
+    }
+    getPlant(query.get('id'), setPlantData, setFallback)
   }, [])
 
   const {
@@ -39,25 +44,31 @@ const Plant = () => {
     <PlantWrapper>
       <Header />
       <PlantContent>
-        <PlantInformation>
-          <PlantName>{name}</PlantName>
-          <Price>${price}</Price>
-          <PlantImage url={url} />
-          <ChosenPreferences>
-            <Preference>
-              {parsePreferenceInformation(sun)}
-            </Preference>
-            <Preference>
-              {parsePreferenceInformation(water)}
-            </Preference>
-            <Preference>
-              {parsePreferenceInformation(toxicity)}
-            </Preference>
-          </ChosenPreferences>
-        </PlantInformation>
-        <FormArea>
-          <Form plantId={id} />
-        </FormArea>
+        {fallback
+          ? history.push('/notfound')
+          : (
+            <>
+              <PlantInformation>
+                <PlantName>{name}</PlantName>
+                <Price>${price}</Price>
+                <PlantImage url={url} />
+                <ChosenPreferences>
+                  <Preference>
+                    {parsePreferenceInformation(sun)}
+                  </Preference>
+                  <Preference>
+                    {parsePreferenceInformation(water)}
+                  </Preference>
+                  <Preference>
+                    {parsePreferenceInformation(toxicity)}
+                  </Preference>
+                </ChosenPreferences>
+              </PlantInformation>
+              <FormArea>
+                <Form plantId={id} />
+              </FormArea>
+            </>
+          )}
       </PlantContent>
     </PlantWrapper>
   )

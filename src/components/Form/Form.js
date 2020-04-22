@@ -3,6 +3,7 @@ import { number } from 'prop-types'
 import { sendUserInformation } from 'services'
 import { ErrorSign } from 'assets'
 import { REGEX } from 'constants/index'
+import handleValue from './utils'
 import {
   FormWrapper,
   Title,
@@ -52,16 +53,6 @@ const Form = ({ plantId }) => {
     }
   }
 
-  const handleNameValue = value => {
-    value.trim()
-    setName(value)
-  }
-
-  const handleEmailValue = value => {
-    value.trim()
-    setEmail(value)
-  }
-
   const showErrorFeedback = value => (
     <ErrorArea>
       <ErrorSign />
@@ -87,7 +78,7 @@ const Form = ({ plantId }) => {
               error={nameError}
               placeholder='Crazy Plant Person'
               onFocus={() => setNameError(false)}
-              onChange={({ target: { value } }) => handleNameValue(value)}
+              onChange={({ target: { value } }) => handleValue(value, setName)}
             />
             {nameError && showErrorFeedback('name')}
             <Label htmlFor='email' error={emailError}>Email</Label>
@@ -97,7 +88,7 @@ const Form = ({ plantId }) => {
               error={emailError}
               placeholder='plantperson@email.com'
               onFocus={() => setEmailError(false)}
-              onChange={({ target: { value } }) => handleEmailValue(value)}
+              onChange={({ target: { value } }) => handleValue(value, setEmail)}
             />
             {emailError && showErrorFeedback('e-mail')}
             <SendButton
@@ -111,7 +102,11 @@ const Form = ({ plantId }) => {
 }
 
 Form.propTypes = {
-  plantId: number.isRequired
+  plantId: number
+}
+
+Form.defaultProps = {
+  plantId: 0
 }
 
 export default Form

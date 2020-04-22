@@ -40,6 +40,7 @@ const Showcase = () => {
                     const { id, name, price, sun, water, url, toxicity } = item
                     return (
                       <Card
+                        key={id}
                         id={id}
                         name={name}
                         price={price}

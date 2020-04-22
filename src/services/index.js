@@ -10,16 +10,22 @@ export const getList = (object, setState, setError, setFallback) => {
       }
       return res
     })
-    .then(res => res.json())
+    .then(res => res && res.json())
     .then(res => {
-      setState(res)
+      res && setState(res)
     })
     .catch(error => console.error(error))
 }
 
-export const getPlant = (id, setState) => {
+export const getPlant = (id, setState, setFallback) => {
   fetch(`${ENDPOINT}/plant?id=${id}`)
-    .then(res => res.json())
+    .then(res => {
+      if (res.status === 422) {
+        return setFallback(true)
+      }
+      return res
+    })
+    .then(res => res && res.json())
     .then(res => {
       setState(res)
     })
