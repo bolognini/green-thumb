@@ -1,5 +1,6 @@
 # Green Thumb 🌱
-<p align="center">&laquo;Green Thumb is an app builded to help you find a new green friend&raquo;</p>
+<p align="center"><img src="src/assets/illustrations/readme-img.png" alt="Green Thumb" width="430"></p>
+<p align="center">&laquo;<b>Green Thumb is an app builded to help you find a new green friend</b>&raquo;</p>
 
 This project was part of Red Ventures frontend test. The challenge consists in building an application that consume an API by filtering some plant preferences, like amount of sunlight and watering the plant needs and if it is toxic or not for animals. When the result is filtered, the application offer a form for buying the chosen green friend. It validates user's name and email, then collect it.
 
