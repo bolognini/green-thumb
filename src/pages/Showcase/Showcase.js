@@ -27,7 +27,7 @@ const Showcase = () => {
     <ShowcaseWrapper>
       <Header />
       {error
-        ? <ErrorComponent text='please, click on puppy to get back to quiz.' />
+        ? <ErrorComponent text='Please, click on the puppy to get back to quiz.' />
         : (
           <ShowcaseContent>
             <Illustration />
@@ -35,7 +35,7 @@ const Showcase = () => {
             <ListCarousel>
               <ShowcaseList fallback={fallback}>
                 {fallback
-                  ? <ErrorComponent text='sorry, but no plant was found with those preferences. please, click on puppy to get back to quiz' />
+                  ? <ErrorComponent text='Sorry, but no plant was found with those preferences. Please, click on the puppy to get back to quiz.' />
                   : list && list.map(item => {
                     const { id, name, price, sun, water, url, toxicity } = item
                     return (

@@ -14,8 +14,8 @@ const NotFound = () => (
         </Link>
         <h4>404</h4>
       </ForbiddenArea>
-      <Caption>this page doesn&apos;t exist. please, <Link to='/'>click here</Link> to return to homepage</Caption>
-      <MobileCaption>this page doesn&apos;t exist. please, <Link to='/'>tap here</Link> to return to homepage</MobileCaption>
+      <Caption>This page doesn&apos;t exist. Please, <Link to='/'>click here</Link> to return to homepage</Caption>
+      <MobileCaption>This page doesn&apos;t exist. Please, <Link to='/'>tap here</Link> to return to homepage</MobileCaption>
     </NotFoundContent>
   </NotFoundWrapper>
 )
