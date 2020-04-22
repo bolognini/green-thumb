@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { breakpoint } from 'components/GlobalStyle'
 import { ButtonWrapper } from 'components/Button/Button.style'
 import Envelop from 'assets/illustrations/envelop.png'
@@ -36,6 +36,18 @@ export const Description = styled.span`
   text-align: ${({ align }) => (align ? 'center' : 'left')};
 `
 
+const envelopAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+`
+
 export const ThankYouImage = styled.div`
   max-width: 204px;
   max-height: 238px;
@@ -47,6 +59,7 @@ export const ThankYouImage = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(${Envelop});
+  animation: ${envelopAnimation} 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
 
   ${breakpoint.desktop} {
     height: 60%;
@@ -98,7 +111,6 @@ export const Input = styled.input`
     color: var(--placeholder-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    line-height: 27px;
   }
 `
 

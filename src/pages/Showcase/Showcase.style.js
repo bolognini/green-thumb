@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { breakpoint } from 'components/GlobalStyle'
 import Pick from 'assets/illustrations/pick.png'
 
@@ -78,7 +78,21 @@ export const ShowcaseList = styled.ul`
   }
 `
 
+const animation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`
+
 export const ListCarousel = styled.div`
+  min-height: 366px;
   overflow: auto;
   padding-bottom: 24px;
+  animation: ${animation} 1s cubic-bezier(0.65, 0.05, 0.36, 1);
 `
