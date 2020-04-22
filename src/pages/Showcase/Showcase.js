@@ -17,36 +17,39 @@ const Showcase = () => {
   const { location: { state } } = history
   const [list, setList] = useState([])
   const [error, setError] = useState(false)
+  const [fallback, setFallback] = useState(false)
 
   useEffect(() => {
-    getList(state, setList, setError)
+    getList(state, setList, setError, setFallback)
   }, [])
 
   return (
     <ShowcaseWrapper>
       <Header />
       {error
-        ? <ErrorComponent />
+        ? <ErrorComponent text='please, click on puppy to get back to quiz.' />
         : (
           <ShowcaseContent>
             <Illustration />
             <h2>Our picks for you</h2>
             <ListCarousel>
-              <ShowcaseList>
-                {list.map(item => {
-                  const { id, name, price, sun, water, url, toxicity } = item
-                  return (
-                    <Card
-                      id={id}
-                      name={name}
-                      price={price}
-                      sun={sun}
-                      water={water}
-                      url={url}
-                      toxicity={toxicity}
-                    />
-                  )
-                })}
+              <ShowcaseList fallback={fallback}>
+                {fallback
+                  ? <ErrorComponent text='sorry, but no plant was found with those preferences. please, click on puppy to get back to quiz' />
+                  : list && list.map(item => {
+                    const { id, name, price, sun, water, url, toxicity } = item
+                    return (
+                      <Card
+                        id={id}
+                        name={name}
+                        price={price}
+                        sun={sun}
+                        water={water}
+                        url={url}
+                        toxicity={toxicity}
+                      />
+                    )
+                  })}
               </ShowcaseList>
             </ListCarousel>
           </ShowcaseContent>

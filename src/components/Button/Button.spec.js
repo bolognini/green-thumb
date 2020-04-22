@@ -4,7 +4,7 @@ import Button from './Button'
 
 const mockedData = {
   text: 'next',
-  hasArrow: false,
+  hasArrow: true,
   secondary: false,
   disabled: false,
   onClick: jest.fn()
@@ -16,9 +16,10 @@ describe('Button component', () => {
   })
 
   it('should render component without crashing', () => {
-    const { getByText } = render(<Button {...mockedData} />)
+    const { getByText, rerender } = render(<Button {...mockedData} />)
+    rerender(<Button {...{ ...mockedData, secondary: true }} />)
     const buttonText = getByText('next')
 
-    expect(buttonText).toBeTruthy()
+    expect(buttonText.textContent).toMatch(/next/)
   })
 })
