@@ -106,6 +106,7 @@ export const Input = styled.input`
   height: 40px;
   border: ${({ error }) => (error ? '1px solid var(--red)' : 'none')};
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   padding-left: 24px;
   margin-bottom: ${({ error }) => (error ? '6px' : '22px')};
   background-color: var(--white);
@@ -114,7 +115,7 @@ export const Input = styled.input`
   &::placeholder {
     color: var(--placeholder-color);
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
   }
 `
 
