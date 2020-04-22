@@ -17,15 +17,10 @@ export const ErrorContent = styled.div`
   margin-bottom: 24px;
 
   h4 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 32px;
     color: var(--dark-green);
     margin-right: 16px;
-
-    ${breakpoint.xsmall} {
-      font-size: 35px;
-      line-height: 43px;
-    }
   }
 
   svg {

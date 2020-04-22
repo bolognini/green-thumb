@@ -1,9 +1,10 @@
 import React from 'react'
+import { string } from 'prop-types'
 import { Link } from 'react-router-dom'
 import { GreenPet } from 'assets'
 import { ErrorWrapper, ErrorContent, Caption, MobileCaption } from './ErrorComponent.style'
 
-const ErrorComponent = () => (
+const ErrorComponent = ({ text }) => (
   <ErrorWrapper>
     <ErrorContent>
       <Link to='/quiz'>
@@ -11,9 +12,13 @@ const ErrorComponent = () => (
       </Link>
       <h4>something went wrong</h4>
     </ErrorContent>
-    <Caption>please, click on puppy to get back to quiz.</Caption>
-    <MobileCaption>please, tap on the puppy to get back to the quiz.</MobileCaption>
+    <Caption>{text}</Caption>
+    <MobileCaption>{text.replace('click', 'tap')}</MobileCaption>
   </ErrorWrapper>
 )
+
+ErrorComponent.propTypes = {
+  text: string.isRequired
+}
 
 export default ErrorComponent

@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -16,17 +14,37 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --no-cache --coverage --watchAll",
+    "test:ci": "npm run test -- --no-cache --coverage --runInBand",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "lint:css": "stylelint src"
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint && yarn lint:css"
+      "pre-push": "yarn lint && yarn lint:css && CI=true npm run test:ci"
     }
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "!src/**/(index|*.style).js",
+      "!src/components/GlobalStyle.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80,
+        "branches": 80,
+        "functions": 80,
+        "lines": 80
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -41,6 +59,8 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
