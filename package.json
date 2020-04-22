@@ -15,6 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --no-cache --coverage --watchAll",
+    "test:ci": "npm run test -- --no-cache --coverage --runInBand",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "lint:css": "stylelint src"
